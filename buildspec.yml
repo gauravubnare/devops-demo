@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+        install:
+                commands:
+                        - ls
+        pre_build:
+                commands:
+                        - echo "pre build"
+                        - ls
+        build:
+                commands:
+                        - echo "build"
+                        - docker build -t test .
+        post_build:
+                commands:
+                        - echo "post build"
+                        - ls -la
